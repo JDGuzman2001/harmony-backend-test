@@ -109,3 +109,36 @@ The server will start on `http://127.0.0.1:8080`
 - This application requires proper Google Cloud and OpenAI configurations
 - Ensure all environment variables are correctly set
 - Recommended to use with a frontend application that can consume these APIs
+
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f4f4f4', 'primaryTextColor': '#333', 'lineColor': '#5D6975'}}}%%
+graph TD
+    subgraph "Frontend: React Application"
+        A[React Components] --> B[State Management]
+        B --> C[Firebase Authentication]
+        B --> D[API Service Layer]
+        D --> E[REST API Calls]
+    end
+
+    subgraph "Backend: FastAPI Application"
+        F[API Endpoints] --> G[Database Interactions]
+        G --> H[Firestore Database]
+        F --> I[OpenAI Integration]
+        F --> J[Authentication Middleware]
+    end
+
+    subgraph "External Services"
+        K[Firebase Auth] --> |Authentication| C
+        L[OpenAI GPT-3.5] --> |AI Workflow Generation| I
+    end
+
+    E --> |HTTP Requests| F
+    
+    H --> |Data Storage & Retrieval| G
+
+    classDef frontend fill:#e6f3ff,stroke:#1e88e5;
+    classDef backend fill:#e8f5e9,stroke:#4caf50;
+    classDef external fill:#fff3e0,stroke:#ff9800;
+
+    class A,B,C,D,E frontend;
+    class F,G,J backend;
+    class K,L external;
