@@ -110,18 +110,3 @@ The server will start on `http://127.0.0.1:8080`
 - Ensure all environment variables are correctly set
 - Recommended to use with a frontend application that can consume these APIs
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-[Specify your license here]
-
-## 🐛 Issues
-
-Report issues at: `<repository-url>/issues`
